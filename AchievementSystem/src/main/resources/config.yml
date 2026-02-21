@@ -1,0 +1,56 @@
+prefix: "&6[업적]&r"
+achievements:
+  first_step:
+    name: "첫 발걸음"
+    description: "서버에 처음 접속했습니다."
+    category: OTHER
+    reward:
+      xp: 100
+      items: []
+      title: "새내기"
+    trigger: FIRST_JOIN
+  diamond_miner:
+    name: "광부왕"
+    description: "다이아몬드를 100개 채굴하세요."
+    category: MINING
+    reward:
+      xp: 500
+      items:
+        - "DIAMOND:5"
+      title: "광부왕"
+    trigger: MINE_BLOCK
+    target_block: DIAMOND_ORE
+    required_count: 100
+  hunter:
+    name: "사냥꾼"
+    description: "몹을 1000마리 처치하세요."
+    category: COMBAT
+    reward:
+      xp: 1000
+      items:
+        - "IRON_SWORD:1"
+      title: "사냥꾼"
+    trigger: KILL_MOB
+    required_count: 1000
+  explorer:
+    name: "탐험가"
+    description: "10개 이상의 바이옴을 방문하세요."
+    category: EXPLORATION
+    reward:
+      xp: 800
+      items: []
+      title: "탐험가"
+    trigger: VISIT_BIOME
+    required_count: 10
+  rich:
+    name: "부자"
+    description: "골드 너겟을 10000개 보유하세요."
+    category: OTHER
+    reward:
+      xp: 600
+      items:
+        - "GOLD_INGOT:10"
+      title: "부자"
+    trigger: HOLD_ITEMS
+    target_item: GOLD_NUGGET
+    required_count: 10000

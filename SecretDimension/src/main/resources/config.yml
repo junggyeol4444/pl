@@ -1,0 +1,32 @@
+prefix: "&d[차원문]&r"
+dimensions:
+  crystal_cave:
+    name: "수정 동굴"
+    description: "수정과 자수정이 가득한 신비로운 동굴"
+    entry_condition: DIAMOND_PORTAL
+    time_limit_minutes: 10
+    reward:
+      xp: 1000
+      items:
+        - "AMETHYST_SHARD:16"
+        - "DIAMOND:5"
+  sky_island:
+    name: "하늘 섬"
+    description: "공중에 떠 있는 신비로운 섬들"
+    entry_condition: HIGH_ALTITUDE_ROCKET
+    time_limit_minutes: 15
+    reward:
+      xp: 1500
+      items:
+        - "ELYTRA:1"
+        - "GOLD_INGOT:10"
+  dark_labyrinth:
+    name: "어둠의 미궁"
+    description: "어두운 미로와 강력한 몹이 기다리는 곳"
+    entry_condition: WITHER_SKULL_SOULSAND
+    time_limit_minutes: 20
+    reward:
+      xp: 3000
+      items:
+        - "NETHERITE_INGOT:1"
+        - "WITHER_SKELETON_SKULL:1"

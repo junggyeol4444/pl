@@ -1,0 +1,10 @@
+name: Encyclopedia
+version: 1.0.0
+main: com.junggyeol.encyclopedia.EncyclopediaPlugin
+api-version: 1.20
+description: 통합 도감 시스템
+authors: [junggyeol]
+commands:
+  도감:
+    description: 도감 메뉴 열기
+    usage: /도감

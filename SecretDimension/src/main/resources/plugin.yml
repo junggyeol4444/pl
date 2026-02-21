@@ -1,0 +1,11 @@
+name: SecretDimension
+version: 1.0.0
+main: com.junggyeol.secretdimension.SecretDimensionPlugin
+api-version: 1.20
+description: 비밀 차원문 플러그인
+authors: [junggyeol]
+soft-depend: [AchievementSystem, Encyclopedia, StatSystem]
+commands:
+  차원:
+    description: 발견한 차원 목록 확인
+    usage: /차원

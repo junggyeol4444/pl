@@ -1,0 +1,71 @@
+prefix: "&e[퀘스트]&r"
+quests:
+  zombie_slayer:
+    name: "좀비 처치"
+    description: "좀비를 30마리 처치하세요."
+    period: DAILY
+    type: KILL_MOB
+    target: ZOMBIE
+    required_count: 30
+    reward:
+      xp: 200
+      items:
+        - "ROTTEN_FLESH:10"
+      skill_points: 1
+  diamond_miner:
+    name: "다이아 채굴"
+    description: "다이아몬드를 5개 채굴하세요."
+    period: DAILY
+    type: MINE_BLOCK
+    target: DIAMOND_ORE
+    required_count: 5
+    reward:
+      xp: 300
+      items:
+        - "DIAMOND:2"
+      skill_points: 1
+  travel_quest:
+    name: "대장정"
+    description: "1000블록을 이동하세요."
+    period: DAILY
+    type: TRAVEL_DISTANCE
+    required_count: 1000
+    reward:
+      xp: 150
+      items: []
+      skill_points: 1
+  nether_visit:
+    name: "네더 탐험"
+    description: "네더를 방문하세요."
+    period: WEEKLY
+    type: VISIT_BIOME
+    target: NETHER_WASTES
+    required_count: 1
+    reward:
+      xp: 500
+      items:
+        - "BLAZE_ROD:3"
+      skill_points: 3
+  trade_quest:
+    name: "상인"
+    description: "마을 주민과 5번 거래하세요."
+    period: WEEKLY
+    type: TRADE
+    required_count: 5
+    reward:
+      xp: 400
+      items:
+        - "EMERALD:5"
+      skill_points: 2
+  dragon_slayer:
+    name: "드래곤 사냥꾼"
+    description: "엔더 드래곤을 처치하세요."
+    period: SPECIAL
+    type: KILL_MOB
+    target: ENDER_DRAGON
+    required_count: 1
+    reward:
+      xp: 2000
+      items:
+        - "DRAGON_EGG:1"
+      skill_points: 10

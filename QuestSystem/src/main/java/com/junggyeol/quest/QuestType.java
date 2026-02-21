@@ -1,0 +1,5 @@
+package com.junggyeol.quest;
+public enum QuestType {
+    KILL_MOB, MINE_BLOCK, CRAFT_ITEM, TRAVEL_DISTANCE, VISIT_BIOME,
+    PLACE_BLOCK, FISH, BREED_ANIMAL, ENCHANT_ITEM, TRADE
+}

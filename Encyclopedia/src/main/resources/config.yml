@@ -1,0 +1,23 @@
+prefix: "&5[도감]&r"
+milestone-rewards:
+  25:
+    xp: 500
+    message: "도감 수집률 25% 달성! 경험치 500을 획득했습니다."
+  50:
+    xp: 1000
+    message: "도감 수집률 50% 달성! 경험치 1000을 획득했습니다."
+  75:
+    xp: 2000
+    message: "도감 수집률 75% 달성! 경험치 2000을 획득했습니다."
+  100:
+    xp: 5000
+    message: "도감 수집률 100% 달성! 경험치 5000을 획득했습니다."
+categories:
+  ITEM: "아이템 도감"
+  MOB: "몹 도감"
+  BIOME: "바이옴 도감"
+  ACHIEVEMENT: "업적 도감"
+  QUEST: "퀘스트 도감"
+  SKILL: "스킬 도감"
+  DIMENSION: "차원 도감"
+  SUPPLY: "보급 상자 도감"

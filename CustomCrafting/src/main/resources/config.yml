@@ -1,0 +1,88 @@
+prefix: "&a[제작대]&r"
+crafting-block: EMERALD_BLOCK
+custom-items:
+  teleport_scroll:
+    name: "&b텔레포트 스크롤"
+    lore:
+      - "&7사용 시 랜덤 좌표로 이동합니다."
+      - "&7(1회용)"
+    material: PAPER
+    custom-model-data: 1001
+    one-time-use: true
+    effect: TELEPORT
+  healing_potion_plus:
+    name: "&c치유의 물약+"
+    lore:
+      - "&7체력을 완전히 회복하고 흡수 효과를 부여합니다."
+    material: POTION
+    custom-model-data: 1002
+    effect: HEAL
+  miners_pickaxe:
+    name: "&e광부의 곡괭이"
+    lore:
+      - "&7채굴 시 아이템이 2배로 드랍될 확률이 있습니다."
+      - "&7내구도: 500"
+    material: DIAMOND_PICKAXE
+    custom-model-data: 1003
+    double-drop-chance: 0.5
+  explorers_compass:
+    name: "&a탐험가의 나침반"
+    lore:
+      - "&7가장 가까운 구조물의 방향을 알려줍니다."
+    material: COMPASS
+    custom-model-data: 1004
+    effect: LOCATE_STRUCTURE
+  protection_totem:
+    name: "&6보호의 토템+"
+    lore:
+      - "&7사망 시 아이템 드랍을 방지합니다."
+      - "&7(1회용)"
+    material: TOTEM_OF_UNDYING
+    custom-model-data: 1005
+    one-time-use: true
+    effect: PROTECT_DEATH
+recipes:
+  teleport_scroll_recipe:
+    result: teleport_scroll
+    result-amount: 1
+    shape:
+      - "EPE"
+      - "PAP"
+      - "EPE"
+    ingredients:
+      E: ENDER_PEARL
+      P: PAPER
+      A: AMETHYST_SHARD
+  healing_potion_recipe:
+    result: healing_potion_plus
+    result-amount: 1
+    shape:
+      - "GGG"
+      - "GWG"
+      - "GGG"
+    ingredients:
+      G: GLISTERING_MELON_SLICE
+      W: WATER_BOTTLE
+  miners_pickaxe_recipe:
+    result: miners_pickaxe
+    result-amount: 1
+    shape:
+      - "DDD"
+      - "ESE"
+      - "ESE"
+    ingredients:
+      D: DIAMOND
+      E: EMERALD
+      S: STICK
+  protection_totem_recipe:
+    result: protection_totem
+    result-amount: 1
+    shape:
+      - "GEG"
+      - "GTG"
+      - "DDD"
+    ingredients:
+      G: GOLD_INGOT
+      E: EMERALD
+      T: TOTEM_OF_UNDYING
+      D: DIAMOND
