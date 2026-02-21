@@ -1,0 +1,11 @@
+name: SupplyBox
+version: 1.0.0
+main: com.junggyeol.supplybox.SupplyBoxPlugin
+api-version: 1.20
+description: 랜덤 보급 상자 플러그인
+authors: [junggyeol]
+soft-depend: [AchievementSystem, Encyclopedia, StatSystem]
+commands:
+  보급:
+    description: 다음 보급 상자 시간 확인
+    usage: /보급

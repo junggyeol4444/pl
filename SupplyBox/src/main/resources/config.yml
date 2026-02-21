@@ -1,0 +1,27 @@
+prefix: "&6[보급상자]&r"
+drop-interval-minutes: 60
+drop-range: 2000
+auto-despawn-minutes: 10
+grade-chances:
+  COMMON: 70
+  RARE: 25
+  LEGENDARY: 5
+loot-tables:
+  COMMON:
+    - "BREAD:5"
+    - "IRON_INGOT:3"
+    - "ARROW:16"
+    - "COOKED_BEEF:8"
+    - "TORCH:16"
+  RARE:
+    - "DIAMOND:2"
+    - "ENCHANTED_BOOK:1"
+    - "GOLDEN_APPLE:2"
+    - "IRON_CHESTPLATE:1"
+    - "EXPERIENCE_BOTTLE:10"
+  LEGENDARY:
+    - "DIAMOND_SWORD:1"
+    - "ELYTRA:1"
+    - "NETHERITE_INGOT:2"
+    - "TOTEM_OF_UNDYING:1"
+    - "DIAMOND_CHESTPLATE:1"
