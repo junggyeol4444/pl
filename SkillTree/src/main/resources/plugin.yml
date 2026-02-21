@@ -1,0 +1,11 @@
+name: SkillTree
+version: 1.0.0
+main: com.junggyeol.skilltree.SkillTreePlugin
+api-version: 1.20
+description: 스킬 트리 플러그인
+authors: [junggyeol]
+soft-depend: [AchievementSystem, Encyclopedia, StatSystem]
+commands:
+  스킬:
+    description: 스킬 트리 메뉴 열기
+    usage: /스킬

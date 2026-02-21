@@ -1,0 +1,84 @@
+prefix: "&b[스킬]&r"
+skill-point-per-level: 1
+trees:
+  MINING:
+    name: "⛏️ 채굴 트리"
+    skills:
+      double_drop:
+        name: "더블 드랍"
+        description: "광물 채굴 시 2배 드랍 확률"
+        max_level: 5
+        cost: 1
+        requires: null
+      auto_smelt:
+        name: "자동 제련"
+        description: "광물이 바로 제련된 상태로 드랍"
+        max_level: 3
+        cost: 2
+        requires: "double_drop:2"
+      vein_sense:
+        name: "광맥 감지"
+        description: "주변 광물에 파티클 표시"
+        max_level: 3
+        cost: 2
+        requires: "double_drop:3"
+      chain_mine:
+        name: "연쇄 채굴"
+        description: "광맥 전체를 한번에 채굴"
+        max_level: 1
+        cost: 5
+        requires: "auto_smelt:3"
+  COMBAT:
+    name: "⚔️ 전투 트리"
+    skills:
+      lifesteal:
+        name: "흡혈"
+        description: "공격 시 체력 회복"
+        max_level: 5
+        cost: 1
+        requires: null
+      dodge:
+        name: "회피"
+        description: "데미지 무시 확률"
+        max_level: 5
+        cost: 1
+        requires: null
+      critical_master:
+        name: "크리티컬 마스터"
+        description: "크리티컬 확률 및 데미지 증가"
+        max_level: 5
+        cost: 2
+        requires: "lifesteal:2"
+      counter_attack:
+        name: "반격"
+        description: "피격 시 반사 데미지"
+        max_level: 3
+        cost: 3
+        requires: "dodge:3"
+  SURVIVAL:
+    name: "🌿 생존 트리"
+    skills:
+      hunger_reduce:
+        name: "배고픔 감소"
+        description: "허기 소모 감소"
+        max_level: 5
+        cost: 1
+        requires: null
+      fall_protection:
+        name: "낙하 보호"
+        description: "낙하 데미지 감소"
+        max_level: 5
+        cost: 1
+        requires: null
+      night_vision:
+        name: "야간 시야"
+        description: "영구 야간 투시 효과"
+        max_level: 1
+        cost: 3
+        requires: "hunger_reduce:3"
+      natural_heal:
+        name: "자연 치유"
+        description: "서서히 체력 회복"
+        max_level: 5
+        cost: 2
+        requires: "fall_protection:2"
