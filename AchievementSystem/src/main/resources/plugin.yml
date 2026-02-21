@@ -1,0 +1,26 @@
+name: AchievementSystem
+version: ${project.version}
+main: com.junggyeol.achievement.AchievementPlugin
+api-version: '1.20'
+description: 마인크래프트 업적 시스템 플러그인
+author: junggyeol
+website: https://github.com/junggyeol4444/pl
+
+commands:
+  achievement:
+    description: 업적 메인 명령어
+    usage: /achievement [목록|정보|관리자]
+    aliases: [업적, ach]
+    permission: achievement.use
+  업적:
+    description: 업적 GUI 열기
+    usage: /업적
+    permission: achievement.use
+
+permissions:
+  achievement.use:
+    description: 업적 시스템 기본 사용 권한
+    default: true
+  achievement.admin:
+    description: 업적 시스템 관리자 권한
+    default: op

@@ -1,0 +1,307 @@
+# AchievementSystem 설정 파일
+# Paper 1.20.4+ 전용 업적 시스템 플러그인
+
+settings:
+  # 업적 달성 시 서버 전체 공지 여부
+  broadcast-on-achievement: true
+  # 업적 달성 시 타이틀 표시 여부
+  show-title: true
+  # 업적 달성 시 사운드 재생 여부
+  play-sound: true
+  # 업적 달성 시 파티클 효과 여부
+  show-particles: true
+  # 채팅에 칭호 표시 여부
+  show-prefix-in-chat: true
+  # 데이터 자동 저장 주기 (틱, 20틱=1초, 기본 6000틱=5분)
+  auto-save-interval: 6000
+  # 언어 설정 (현재 ko_KR만 지원)
+  language: ko_KR
+
+# 업적 정의
+# 형식:
+# achievements:
+#   <업적_ID>:
+#     name: <표시 이름>
+#     description: <설명>
+#     category: <카테고리: MINING|COMBAT|EXPLORATION|BUILDING|SOCIAL>
+#     icon: <아이콘 아이템>
+#     hidden: <숨김 여부: true|false>
+#     reward:
+#       exp: <경험치>
+#       items: <아이템 목록>
+#       title: <칭호>
+#     condition:
+#       type: <조건 유형>
+#       value: <목표 값>
+
+achievements:
+  # ===== 소셜 =====
+  first_join:
+    name: "첫 발걸음"
+    description: "서버에 처음으로 접속하세요."
+    category: SOCIAL
+    icon: GRASS_BLOCK
+    hidden: false
+    reward:
+      exp: 100
+      title: "새내기"
+    condition:
+      type: FIRST_JOIN
+      value: 1
+
+  play_days_10:
+    name: "단골 손님"
+    description: "10일 연속으로 접속하세요."
+    category: SOCIAL
+    icon: CALENDAR
+    hidden: false
+    reward:
+      exp: 500
+      title: "단골"
+    condition:
+      type: CONSECUTIVE_DAYS
+      value: 10
+
+  play_days_30:
+    name: "진정한 주민"
+    description: "30일 연속으로 접속하세요."
+    category: SOCIAL
+    icon: NETHER_STAR
+    hidden: false
+    reward:
+      exp: 2000
+      title: "진정한 주민"
+    condition:
+      type: CONSECUTIVE_DAYS
+      value: 30
+
+  # ===== 채굴 =====
+  mine_stone_100:
+    name: "채굴꾼"
+    description: "돌을 100개 채굴하세요."
+    category: MINING
+    icon: STONE
+    hidden: false
+    reward:
+      exp: 50
+    condition:
+      type: MINE_BLOCK
+      block: STONE
+      value: 100
+
+  mine_diamond:
+    name: "다이아몬드 발견"
+    description: "다이아몬드 광석을 채굴하세요."
+    category: MINING
+    icon: DIAMOND
+    hidden: false
+    reward:
+      exp: 300
+      title: "다이아 채굴꾼"
+    condition:
+      type: MINE_BLOCK
+      block: DIAMOND_ORE
+      value: 1
+
+  mine_diamond_50:
+    name: "다이아몬드 광부"
+    description: "다이아몬드 광석을 50개 채굴하세요."
+    category: MINING
+    icon: DIAMOND_PICKAXE
+    hidden: false
+    reward:
+      exp: 1000
+      title: "광부왕"
+    condition:
+      type: MINE_BLOCK
+      block: DIAMOND_ORE
+      value: 50
+
+  mine_ancient_debris:
+    name: "고대의 잔해"
+    description: "고대의 잔해를 채굴하세요."
+    category: MINING
+    icon: ANCIENT_DEBRIS
+    hidden: false
+    reward:
+      exp: 500
+      title: "네더 탐험가"
+    condition:
+      type: MINE_BLOCK
+      block: ANCIENT_DEBRIS
+      value: 1
+
+  # ===== 전투 =====
+  kill_zombie_10:
+    name: "좀비 사냥꾼"
+    description: "좀비를 10마리 처치하세요."
+    category: COMBAT
+    icon: ROTTEN_FLESH
+    hidden: false
+    reward:
+      exp: 100
+    condition:
+      type: KILL_MOB
+      mob: ZOMBIE
+      value: 10
+
+  kill_zombie_100:
+    name: "좀비 학살자"
+    description: "좀비를 100마리 처치하세요."
+    category: COMBAT
+    icon: ZOMBIE_HEAD
+    hidden: false
+    reward:
+      exp: 500
+      title: "좀비 학살자"
+    condition:
+      type: KILL_MOB
+      mob: ZOMBIE
+      value: 100
+
+  kill_ender_dragon:
+    name: "엔더 드래곤 정복자"
+    description: "엔더 드래곤을 처치하세요."
+    category: COMBAT
+    icon: DRAGON_EGG
+    hidden: false
+    reward:
+      exp: 2000
+      title: "드래곤 슬레이어"
+    condition:
+      type: KILL_MOB
+      mob: ENDER_DRAGON
+      value: 1
+
+  kill_wither:
+    name: "위더 정복자"
+    description: "위더를 처치하세요."
+    category: COMBAT
+    icon: WITHER_SKELETON_SKULL
+    hidden: false
+    reward:
+      exp: 1500
+      title: "위더 슬레이어"
+    condition:
+      type: KILL_MOB
+      mob: WITHER
+      value: 1
+
+  kill_player_10:
+    name: "PVP 입문자"
+    description: "다른 플레이어를 10번 처치하세요."
+    category: COMBAT
+    icon: IRON_SWORD
+    hidden: false
+    reward:
+      exp: 300
+      title: "전사"
+    condition:
+      type: KILL_PLAYER
+      value: 10
+
+  # ===== 탐험 =====
+  walk_1000:
+    name: "방랑자"
+    description: "총 1000블록을 이동하세요."
+    category: EXPLORATION
+    icon: LEATHER_BOOTS
+    hidden: false
+    reward:
+      exp: 100
+    condition:
+      type: WALK_DISTANCE
+      value: 1000
+
+  walk_10000:
+    name: "대탐험가"
+    description: "총 10000블록을 이동하세요."
+    category: EXPLORATION
+    icon: DIAMOND_BOOTS
+    hidden: false
+    reward:
+      exp: 500
+      title: "대탐험가"
+    condition:
+      type: WALK_DISTANCE
+      value: 10000
+
+  enter_nether:
+    name: "지옥문 개척자"
+    description: "네더에 처음으로 입장하세요."
+    category: EXPLORATION
+    icon: NETHERRACK
+    hidden: false
+    reward:
+      exp: 200
+      title: "네더 탐험가"
+    condition:
+      type: ENTER_WORLD
+      world: THE_NETHER
+      value: 1
+
+  enter_end:
+    name: "엔드의 관문"
+    description: "엔드에 처음으로 입장하세요."
+    category: EXPLORATION
+    icon: END_STONE
+    hidden: false
+    reward:
+      exp: 300
+      title: "엔드 탐험가"
+    condition:
+      type: ENTER_WORLD
+      world: THE_END
+      value: 1
+
+  # ===== 건축 =====
+  place_block_100:
+    name: "건축 입문자"
+    description: "블록을 100개 설치하세요."
+    category: BUILDING
+    icon: BRICKS
+    hidden: false
+    reward:
+      exp: 50
+    condition:
+      type: PLACE_BLOCK
+      value: 100
+
+  place_block_10000:
+    name: "마스터 빌더"
+    description: "블록을 10000개 설치하세요."
+    category: BUILDING
+    icon: EMERALD_BLOCK
+    hidden: false
+    reward:
+      exp: 1000
+      title: "마스터 빌더"
+    condition:
+      type: PLACE_BLOCK
+      value: 10000
+
+  # ===== 죽음 =====
+  die_first:
+    name: "첫 번째 죽음"
+    description: "처음으로 죽어보세요."
+    category: SOCIAL
+    icon: SKELETON_SKULL
+    hidden: true
+    reward:
+      exp: 10
+    condition:
+      type: DEATH_COUNT
+      value: 1
+
+  die_100:
+    name: "불사조"
+    description: "100번 죽으세요."
+    category: SOCIAL
+    icon: TOTEM_OF_UNDYING
+    hidden: false
+    reward:
+      exp: 100
+      title: "불사조"
+    condition:
+      type: DEATH_COUNT
+      value: 100
