@@ -1,0 +1,11 @@
+name: CustomCrafting
+version: 1.0.0
+main: com.junggyeol.crafting.CustomCraftingPlugin
+api-version: 1.20
+description: 커스텀 제작대 플러그인
+authors: [junggyeol]
+soft-depend: [Encyclopedia, AchievementSystem, StatSystem]
+commands:
+  제작대:
+    description: 커스텀 제작대 열기
+    usage: /제작대
